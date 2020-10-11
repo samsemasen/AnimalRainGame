@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 3015741629500276718}
   - component: {fileID: 240692746754585873}
   - component: {fileID: 3728052360034793369}
+  - component: {fileID: -180371252942815328}
   m_Layer: 0
   m_Name: penguin
   m_TagString: Untagged
@@ -298,6 +299,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4.5119553
   m_Center: {x: -0, y: 4.011958, z: 0}
+--- !u!114 &-180371252942815328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015741629490801206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 724edf41eb4db7d4eb94a607b7ce3c95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3015741629490801208
 GameObject:
   m_ObjectHideFlags: 0

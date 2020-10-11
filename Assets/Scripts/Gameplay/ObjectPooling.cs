@@ -26,7 +26,19 @@ public class ObjectPooling : MonoBehaviour
                 GameObject obj = Instantiate(animalsToPool[i]);
                 pooledAnimals.Add(obj);
                 obj.transform.parent = transform;
+                obj.SetActive(false);
             }
         }
     }
+
+    public GameObject GetPooledAnimal()
+    {
+        for (int i = 0; i < pooledAnimals.Count; i++) {
+            if (!pooledAnimals[i].activeInHierarchy) {
+                return pooledAnimals[i];
+            }
+        }  
+        return null;
+    }
+
 }
