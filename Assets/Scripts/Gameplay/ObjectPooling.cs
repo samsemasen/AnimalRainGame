@@ -21,6 +21,32 @@ public class ObjectPooling : MonoBehaviour
             _instance = this;
 
         pooledAnimals = new List<GameObject>();
+
+        CreateAnimals();
+        
+    }
+
+    public GameObject GetPooledAnimal()
+    {
+        
+        int randAnimal;
+
+        if (!(AnimalSpawner.spawnedAnimalCount == pooledAnimals.Count)) 
+       {
+            int randObstacle;
+            do {
+                randAnimal = Random.Range(0, pooledAnimals.Count);
+            } while (pooledAnimals[randAnimal].activeInHierarchy);
+            return pooledAnimals[randAnimal];
+        } else {
+            CreateAnimals();
+            return GetPooledAnimal();
+        }
+
+    }
+
+    public void CreateAnimals()
+    {
         for (int i = 0; i < animalsToPool.Length; i++) {
             for (int j = 0; j < animalCount; j++) {
                 GameObject obj = Instantiate(animalsToPool[i]);
@@ -28,17 +54,8 @@ public class ObjectPooling : MonoBehaviour
                 obj.transform.parent = transform;
                 obj.SetActive(false);
             }
-        }
-    }
 
-    public GameObject GetPooledAnimal()
-    {
-        for (int i = 0; i < pooledAnimals.Count; i++) {
-            if (!pooledAnimals[i].activeInHierarchy) {
-                return pooledAnimals[i];
-            }
-        }  
-        return null;
+        }
     }
 
 }

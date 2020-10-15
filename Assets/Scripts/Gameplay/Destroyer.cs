@@ -15,5 +15,7 @@ public class Destroyer : MonoBehaviour
     {
         // Destroy(gameObject);
         gameObject.SetActive(false);
+        AnimalSpawner.spawnedAnimalCount--;
+
     }
 }

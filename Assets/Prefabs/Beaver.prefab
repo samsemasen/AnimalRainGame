@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 6354738460438834866}
   - component: {fileID: -1052388501632984721}
   - component: {fileID: 6614383660341320403}
-  m_Layer: 0
+  - component: {fileID: 1795067760}
+  m_Layer: 9
   m_Name: Beaver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,8 +82,21 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!135 &1795067760
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6354738460429475072}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 6.63
+  m_Center: {x: 0, y: -6.54, z: 0}
 --- !u!1 &6354738460429475074
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6354738460429762914}
   - component: {fileID: 6354738460434681970}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6354738460429762916}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dummy001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6354738460429762918}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dummy002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +256,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6354738460429762904}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6354738460429762898}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6354738460429762906}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6354738460429762910}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6354738460429762908}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone001(mirrored)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6354738460429762896}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone002(mirrored)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +441,7 @@ GameObject:
   - component: {fileID: 6354738460429676346}
   - component: {fileID: 6354738460443828730}
   - component: {fileID: 6354738460443908890}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: smog
   m_TagString: Untagged
   m_Icon: {fileID: 0}

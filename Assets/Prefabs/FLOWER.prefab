@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 2160091777106656550}
   - component: {fileID: 2160091777098864608}
   - component: {fileID: 7621244876004131878}
+  - component: {fileID: -615455650919363710}
   m_Layer: 0
   m_Name: FLOWER
   m_TagString: Untagged
@@ -187,6 +188,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4.549365
   m_Center: {x: 0, y: -4.38, z: -0.0000010010774}
+--- !u!136 &-615455650919363710
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2160091777106430214}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 5.6914907
+  m_Height: 11.382982
+  m_Direction: 1
+  m_Center: {x: 0.7714908, y: 0, z: 0}
 --- !u!1 &2160091777106430216
 GameObject:
   m_ObjectHideFlags: 0
