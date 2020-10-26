@@ -1,18 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PauseGameState : MonoBehaviour
+public class PauseGameState : MonoBehaviour , IState
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject _pauseScreen;
+    private Button resumeButton;
+
+    public void Enter()
     {
-        
+        Debug.Log("Entered Pause state");
+
+        _pauseScreen.SetActive(true);
+        resumeButton = _pauseScreen.GetComponentInChildren<Button>();
+        resumeButton.onClick.AddListener(HandlePauseButton);
+        Time.timeScale = 0f;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Exit()
     {
-        
+        _pauseScreen.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+
+    private void HandlePauseButton()
+    {
+        GameManager.Instance.SetState(StateType.GameState);
     }
 }
+

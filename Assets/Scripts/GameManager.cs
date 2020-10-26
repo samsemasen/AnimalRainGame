@@ -1,18 +1,54 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private List<State> _gameStates = new List<State>();
+
+    private static IState _currentState;
+
+    private void Start()
     {
-        
+        SetState(StateType.PreGameState);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    #region STATE MACHINE
+    public void SetState(StateType stateType)
     {
-        
+        IState nextState = _gameStates.FirstOrDefault(x => x.stateType == stateType).stateScript as IState;
+
+        if (_currentState == nextState) return;
+        if (_currentState != null) _currentState.Exit();
+
+        _currentState = nextState;
+        nextState.Enter();
     }
+
+    public IState GetCurrentState()
+    {
+        return _currentState;
+    }
+    #endregion
+    
 }
+
+[System.Serializable]
+public class State
+{
+    public StateType stateType;
+    public MonoBehaviour stateScript;
+}
+
+public enum StateType
+{
+    PreGameState,
+    GameState,
+    PauseGameState
+}
+
+public delegate void CallBack();
+
