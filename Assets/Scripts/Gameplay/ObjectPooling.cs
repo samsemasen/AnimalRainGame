@@ -33,7 +33,6 @@ public class ObjectPooling : MonoBehaviour
 
         if (!(AnimalSpawner.spawnedAnimalCount == pooledAnimals.Count)) 
        {
-            int randObstacle;
             do {
                 randAnimal = Random.Range(0, pooledAnimals.Count);
             } while (pooledAnimals[randAnimal].activeInHierarchy);
